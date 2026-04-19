@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Routing Simulator</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Routing Algorithm Simulator</h1>
+
+<!-- Input section for user to enter nodes and edges, and add nodes -->
+<div id="inputs">
+  <label for="nodesInput">Nodes (comma separated, e.g., A,B,C,D,E):</label>
+  <input type="text" id="nodesInput" value="A,B,C,D,E" />
+
+  <label for="edgesInput">Edges (one per line, format: Node1 Node2 Weight):</label>
+  <textarea id="edgesInput">
+A B 2
+A C 5
+B C 1
+B D 3
+C D 2
+D E 1
+  </textarea>
+
+  <div id="addNodeContainer">
+    <input type="text" id="addNodeInput" placeholder="Add new node (e.g., F)" />
+    <button id="addNodeBtn">Add Node</button>
+  </div>
+
+  <button id="updateGraphBtn">Update Graph</button>
+</div>
+
+<div id="canvasContainer">
+  <canvas id="graphCanvas" width="700" height="400"></canvas>
+</div>
+
+<div class="button-container">
+  <button id="dvButton">Distance Vector</button>
+  <button id="lsButton">Link State</button>
+</div>
+
+<div id="resultLabel">Select Algorithm</div>
+
+<table id="resultsTable" border="1">
+  <thead></thead>
+  <tbody></tbody>
+</table>
+
+<script src="script.js"></script>
+</body>
+</html>
